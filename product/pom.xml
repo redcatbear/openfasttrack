@@ -62,6 +62,11 @@
             <artifactId>openfasttrace-testutil</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.exasol</groupId>
+            <artifactId>maven-project-version-getter</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>openfasttrace-${revision}</finalName>

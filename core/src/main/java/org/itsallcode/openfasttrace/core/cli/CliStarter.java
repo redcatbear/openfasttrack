@@ -38,7 +38,7 @@ public class CliStarter
 
     /**
      * Auxiliary entry point to the command line application that allows
-     * injection of a
+     * injection of a {@link DirectoryService}.
      * 
      * @param args
      *            command line arguments.

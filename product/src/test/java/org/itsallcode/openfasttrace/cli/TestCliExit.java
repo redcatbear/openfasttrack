@@ -2,6 +2,7 @@ package org.itsallcode.openfasttrace.cli;
 
 import static org.itsallcode.junit.sysextensions.AssertExit.assertExitWithStatus;
 
+import java.time.Duration;
 import java.util.*;
 
 import org.itsallcode.junit.sysextensions.ExitGuard;
@@ -61,5 +62,11 @@ class TestCliExit
     {
         final String[] arguments = { "--zzzzz" };
         assertExitWithStatus(ExitStatus.CLI_ERROR.getCode(), () -> CliStarter.main(arguments));
+    }
+
+    @Test
+    void testExecutableJarLauncher()
+    {
+        JarLauncher.start(null, List.of()).waitUntilTerminated(Duration.ofSeconds(10));
     }
 }
